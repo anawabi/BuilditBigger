@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class EndPointAsyncTask extends AsyncTask<Context, Void, String> {
     private MyApi myApiService = null;
-    private Context context;
+
     @Override
     protected String doInBackground(Context... params) {
         if(myApiService == null) {  // Only do this once
@@ -34,8 +34,6 @@ public class EndPointAsyncTask extends AsyncTask<Context, Void, String> {
             myApiService = builder.build();
         }
 
-        context = params[0];
-//        String name = params[0];
 
         try {
             return myApiService.getJoke().execute().getData();
