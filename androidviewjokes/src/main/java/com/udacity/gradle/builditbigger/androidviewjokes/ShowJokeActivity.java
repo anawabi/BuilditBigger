@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class ShowJokeActivity extends AppCompatActivity {
     public static final String JOKE_EXTRA = "The_Joke";
-    TextView mJokeTv;
+    private TextView mJokeTv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

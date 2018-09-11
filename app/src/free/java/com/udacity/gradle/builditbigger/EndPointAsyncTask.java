@@ -11,7 +11,7 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-public class EndPointAsyncTask extends AsyncTask<Context, Void, String> {
+class EndPointAsyncTask extends AsyncTask<Context, Void, String> {
     private MyApi myApiService = null;
     private Context context;
     @Override

@@ -20,7 +20,7 @@ import com.udacity.gradle.builditbigger.androidviewjokes.ShowJokeActivity;
 public class MainActivity extends AppCompatActivity {
     public static String sJoke;
     private InterstitialAd mInterstitialAd;
-    Button mJokebtn;
+    private Button mJokebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
+    private void tellJoke(View view) {
 //        String joke = jokes.getJoke();
         new EndPointAsyncTask().execute(this);
 //        Toast.makeText(this, sJoke, Toast.LENGTH_SHORT).show();
