@@ -26,13 +26,10 @@ public class TellJokeTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
-    Context context;
-
-
     @Test
     public void showJokeTest() {
         onView(withId(R.id.joke_btn)).perform(click());
-        onView(withText(R.id.viewjoke_tv)).check(matches(not(withText(" "))));
+        onView(withId(R.id.viewjoke_tv)).check(matches(not(withText(""))));
 
     }
 
